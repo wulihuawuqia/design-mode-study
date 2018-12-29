@@ -1,6 +1,9 @@
 package com.study.design.mode.samples.proxy;
 
 public class TeacherCang implements Girl {
+
+
+	@Override
 	public boolean dating(float length) {
 		if (length >= 1.7F) {
 			System.out.println("身高可以，可以约！");

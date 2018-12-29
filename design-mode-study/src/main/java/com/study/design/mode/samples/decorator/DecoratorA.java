@@ -2,15 +2,17 @@ package com.study.design.mode.samples.decorator;
 
 public class DecoratorA extends Decorator {
 
-	public DecoratorA(Component component) {
-		super(component);
-	}
+    public DecoratorA(Component component) {
+        super(component);
+    }
 
-	public String methodA() {
-		return this.component.methodA() + " + A";
-	}
+    @Override
+    public String methodA() {
+        return this.component.methodA() + " + A";
+    }
 
-	public int methodB() {
-		return this.component.methodB() + 10;
-	}
+    @Override
+    public int methodB() {
+        return this.component.methodB() + 10;
+    }
 }

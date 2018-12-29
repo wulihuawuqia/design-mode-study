@@ -17,6 +17,7 @@ public class CglibDemo {
 			this.target = target;
 		}
 
+		@Override
 		public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
 
 			System.out.println("**************** " + method.getName());
@@ -42,7 +43,7 @@ public class CglibDemo {
 		private void doSomethingAfter() {
 			System.out.println("老板你觉得怎样？ 欢迎下次.....");
 		}
-	};
+	}
 
 	public static void main(String[] args) {
 		Enhancer e = new Enhancer();
@@ -53,7 +54,7 @@ public class CglibDemo {
 
 		e.setInterfaces(new Class[] { Girl.class });
 		Girl g = (Girl) e.create();
-		g.dating(1.8f);
+		g.dating(1.7f);
 
 		System.out.println("------------------------------------------");
 		// 对类生成代理对象

@@ -2,6 +2,7 @@ package com.study.design.mode.samples.proxy;
 
 public class TeacherChen implements Boy {
 
+	@Override
 	public boolean dating(char cup) {
 		if (cup == 'E') {
 			System.out.println("这个女老板品德正好，可以约！");
